@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
         <figure>
           <h1 id="personal-logo" onclick="toggleModal()">
@@ -31,14 +31,14 @@
         <ul class="nav__link--list">
           <li class="nav__link click">
             <a
-              href=""
+              onclick="toggleModal()"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >About</a
             >
           </li>
           <li class="nav__link click">
             <a
-              href=""
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
@@ -96,9 +96,11 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fa-solid fa-envelope"></i>
-      </button>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+      </a>
       <a href="#projects" class="scroll"
         ><div class="scroll__icon click"></div
       ></a>
@@ -194,6 +196,16 @@
         </div>
       </div>
     </section>
+
+    <img src="/assets/semi circle.svg" class="shape shape--0" />
+    <img src="/assets/circle.svg" class="shape shape--1" />
+    <img src="/assets/squiggly.svg" class="shape shape--2" />
+    <img src="/assets/circle.svg" class="shape shape--3" />
+    <img src="/assets/triangle.svg" class="shape shape--4" />
+    <img src="/assets/circle.svg" class="shape shape--5" />
+    <img src="/assets/squiggly.svg" class="shape shape--6" />
+    <img src="/assets/circle.svg" class="shape shape--7" />
+    <img src="/assets/semi circle.svg" class="shape shape--8" />
 
     <section id="projects">
       <div class="container">
@@ -317,7 +329,7 @@
               LinkedIn</a
             >
             <a
-              href="#"
+              onclick="toggleModal()"
               class="footer__social--link link__hover-effect link__hover-effect--white">
               Contact</a
             >

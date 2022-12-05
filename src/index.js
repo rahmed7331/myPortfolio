@@ -1,3 +1,19 @@
+// ------------ Moving Background Shapes  ------------ //
+const scaleFactor = 1 / 20;
+const moveBackground = (event) => {
+  const shapes = document.querySelectorAll(".shape");
+  const positionX = event.clientX * scaleFactor;
+  const positionY = event.clientY * scaleFactor;
+
+  for (let i = 0; i < shapes.length; i++) {
+    const isOdd = i % 2 !== 0;
+    const boolInt = isOdd ? -1 : 1;
+    shapes[i].style.transform = `translate(${positionX * boolInt}px, ${
+      positionY * boolInt
+    }px)`;
+  }
+};
+
 // --------------- Theme change Icon  --------------- //
 let contrastToggle = false;
 const toggleContrast = () => {
